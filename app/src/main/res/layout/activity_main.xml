@@ -148,18 +148,31 @@
         app:layout_constraintTop_toBottomOf="@id/cidadeTv"
         />
 
-    <Spinner android:id="@+id/ufSp"
+    <TextView android:id="@+id/ufTv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="UF"
+        android:textSize="15sp"
         android:padding="5dp"
         android:layout_margin="5dp"
+        android:gravity="left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cidadeEt"
         />
 
-    <Button
-        android:id="@+id/salvarBt"
+    <Spinner android:id="@+id/ufSp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/uf"
+        android:padding="5dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ufTv"
+        />
+
+    <Button android:id="@+id/salvarBt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
