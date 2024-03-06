@@ -10,5 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         amb = ActivityMainBinding.inflate(layoutInflater)
         setContentView(amb.root)
+
+        amb.mainTb.apply {
+            title = getString(R.string.app_name)
+            setSupportActionBar(this)
+        }
     }
 }
