@@ -31,6 +31,14 @@ class MainActivity : AppCompatActivity() {
                         Toast.makeText(this@MainActivity, it, Toast.LENGTH_SHORT).show()
                 }
             }
+            limparBt.setOnClickListener {
+                nomecompletoEt.text.clear()
+                telefoneEt.text.clear()
+                emailEt.text.clear()
+                masculinoRb.isChecked = true
+                cidadeEt.text.clear()
+                ufSp.setSelection(0)
+            }
         }
     }
 }
