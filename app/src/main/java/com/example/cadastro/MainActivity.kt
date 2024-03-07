@@ -19,11 +19,13 @@ class MainActivity : AppCompatActivity() {
 
         with(amb) {
             val sexo = if (masculinoRb.isChecked) "Masculino" else "Feminino"
+            val check = if(emailCb.isChecked) "Sim" else "Não"
             salvarBt.setOnClickListener {
                 val formulario = Formulario(
                     nomecompletoEt.text.toString(),
                     telefoneEt.text.toString(),
                     emailEt.text.toString(),
+                    check,
                     sexo,
                     cidadeEt.text.toString(),
                     ufSp.selectedItem.toString()
@@ -35,6 +37,7 @@ class MainActivity : AppCompatActivity() {
                 nomecompletoEt.text.clear()
                 telefoneEt.text.clear()
                 emailEt.text.clear()
+                emailCb.setChecked(false)
                 masculinoRb.isChecked = true
                 cidadeEt.text.clear()
                 ufSp.setSelection(0)
