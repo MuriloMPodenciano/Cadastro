@@ -17,15 +17,15 @@ class MainActivity : AppCompatActivity() {
             setSupportActionBar(this)
         }
 
-        with(amb){
+        with(amb) {
+            val sexo = if (masculinoRb.isChecked) "Masculino" else "Feminino"
             salvarBt.setOnClickListener {
-                "Nome Completo: ${nomecompletoEt.text}".also {
-                    Toast.makeText(
-                        this@MainActivity,
-                        it,
-                        Toast.LENGTH_SHORT
-                    ).show()
-                }
+                val nome = nomecompletoEt.text.toString()
+                val telefone = telefoneEt.text.toString()
+                val email = emailEt.text.toString()
+                val sexo = sexo
+                val cidade = cidadeEt.text.toString()
+                val uf = ufSp.selectedItem.toString()
             }
         }
     }
