@@ -1,8 +1,7 @@
 package com.example.cadastro
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.cadastro.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,12 +19,14 @@ class MainActivity : AppCompatActivity() {
         with(amb) {
             val sexo = if (masculinoRb.isChecked) "Masculino" else "Feminino"
             salvarBt.setOnClickListener {
-                val nome = nomecompletoEt.text.toString()
-                val telefone = telefoneEt.text.toString()
-                val email = emailEt.text.toString()
-                val sexo = sexo
-                val cidade = cidadeEt.text.toString()
-                val uf = ufSp.selectedItem.toString()
+                val formulario = Formulario(
+                    nomecompletoEt.text.toString(),
+                    telefoneEt.text.toString(),
+                    emailEt.text.toString(),
+                    sexo,
+                    cidadeEt.text.toString(),
+                    ufSp.selectedItem.toString()
+                    )
             }
         }
     }
