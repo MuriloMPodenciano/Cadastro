@@ -1,6 +1,7 @@
 package com.example.cadastro
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.cadastro.databinding.ActivityMainBinding
 
@@ -26,7 +27,9 @@ class MainActivity : AppCompatActivity() {
                     sexo,
                     cidadeEt.text.toString(),
                     ufSp.selectedItem.toString()
-                    )
+                    ).toString().also {
+                        Toast.makeText(this@MainActivity, it, Toast.LENGTH_SHORT).show()
+                }
             }
         }
     }
